@@ -9,7 +9,7 @@ const generateMarkdown =require("./utils/generateMarkdown");
 const questions = [
     {
        type:"input",
-       name:"Project Title",
+       name:"Title",
        message:"What is the your project's title?", 
     },
     {
@@ -24,13 +24,13 @@ const questions = [
      },
      {
         type:"input",
-        name:"Credits",
-        message:"Do you have any credits to add?", 
+        name:"Usage",
+        message:"How to use this app?", 
      },
      {
         type:"input",
-        name:"Usage",
-        message:"How to use this app?", 
+        name:"Credits",
+        message:"Do you have any credits to add?", 
      },
      {
         type:"input",
@@ -56,7 +56,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init () {
+    inquirer.prompt(questions).then((res) => {
+        console.log("Processing Professional README.md File...");
+        writeToFile("./gen/README.md", generateMarkdown({...res}));
+    });
+    
+}
 
 // Function call to initialize app
 init();
