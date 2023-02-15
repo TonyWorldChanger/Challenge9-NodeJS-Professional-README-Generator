@@ -41,7 +41,7 @@ You will need to have node js installed and also inquirer will be needed.
 
 ## Usage
 
-[Github Page Address](https://github.com/TonyWorldChanger/Challenge9-NodeJS-Professional-README-Generator)
+[Github Page Address](https://github.com/TonyWorldChanger/Challenge9-NodeJS-Professional-README-Generatorgit)
 
 You will be prompt by the command line to creat a README.md. The user will need to fill out the questions to populate the README.
 
